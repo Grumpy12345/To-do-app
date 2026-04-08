@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+body {
+    font-family: Nunito, sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.app-container {
+    width: 80vw;
+    max-width: 500px;
+    height: 80vh;
+    padding: 5%;
+    margin: 5%;
+    border-radius: 10%;
+    backdrop-filter: blur(1rem);
+    box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.todos, .completed {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    width: 90%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+
+    background: rgba(235, 235, 235, 0.8);
+    backdrop-filter: blur(0.5rem);
+    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.todos:hover {
+    transform: scale(1.02);
+    cursor: text;
+}
+
+.delete-btn {
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #ff4d4d;
+    transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.completed h2 {
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+}
+
+#add-task {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 10%;
+    max-width: 4rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: black;
+    border: none;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+#add-task:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
